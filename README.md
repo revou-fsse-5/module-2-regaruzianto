@@ -1,4 +1,5 @@
 # About Author
+https://dreamy-figolla-53a792.netlify.app/
 
 Hello! My name is Rega, and I am currently a student at RevoU, where I am diving deep into the world of fullstack development.😁😁😁 
 
