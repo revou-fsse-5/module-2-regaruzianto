@@ -1,7 +1,7 @@
- * {
+* {
     margin: 0px;
     padding: 0px;
- }
+}
 
 body{
    width: fit-content;
@@ -52,12 +52,14 @@ nav a{
     font-weight: 600;
 }
 .Home{
-    
+    background-image: url('/Assets/img1.jpg');
     width: 100%;
     height: 600px;
     max-height: max-content;
     margin-top: 48px;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
     align-content: center;
 
 }
@@ -114,6 +116,7 @@ main{
     border-radius: 5px;
     padding: 8px;
 }
+
 .article-container >h3 {
     font-weight: 400;
 }
@@ -136,10 +139,17 @@ main{
 .card-board{
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
     transition: all 0.3s ease 0s;
+    max-height: 350px;
+    overflow: scroll;
     width: 50%;
     border-radius: 5px;
     text-align: -webkit-center;
     padding: 12px;
+    animation-name: animasi-boxshadow;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    
 }
 .card-board >h1,h2 {
     font-weight: 400;
@@ -156,7 +166,13 @@ main{
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
+    transition: transform 1s;
 }
+.card-profile:hover {
+    transform: scale(1.1);
+    background-color: #9fdff4;
+} 
+
 .card-profile h3{
     width: 150px;
     font-weight: 500;
@@ -222,12 +238,16 @@ form {
 
 form >button {
     background-color: #3cb0d7;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     color: white;
     font-family: Kanit,sans-serif;
     border: 0px;
     border-radius: 24px;
     width: 5rem;
     height: 2rem;
+}
+form>button:hover{
+    background-color: #7ccde9;
 }
 .input-width {
     width: 70%;
@@ -313,9 +333,32 @@ form >button {
 
 /* Animation */
 @keyframes animasi {
-    from {box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);}
-    to {box-shadow: 0 3px 6px rgb(6 255 195 / 16%), 0 1px 2px rgb(3 223 235 / 23%);}
-  }
+    from {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
+    }
+    to {
+        box-shadow: 0 3px 6px rgb(6 255 195 / 16%), 0 1px 2px rgb(3 223 235 / 23%);
+    }
+}
+@keyframes animasi-boxshadow {
+    0% {
+        box-shadow: #3cb0d7 0px -5px 8px 0px ;
+    }
+    25% {
+        box-shadow: #3cb0d7 5px 0px 8px 0px ;
+    }
+    50% {
+        box-shadow: #3cb0d7 0px 5px 8px 0px ;
+    }
+    75% {
+        box-shadow: #3cb0d7 -5px 0px 8px 0px;
+    }
+    100% {
+        box-shadow: #3cb0d7 0px -5px 8px 0px ;
+    }
+}
+
+
 
 /* mobile */
 @media screen and (max-width:600px)  {

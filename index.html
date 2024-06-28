@@ -11,9 +11,11 @@
     <meta name="description" content="blog about study software engineer">
 
     <title>Study Journal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+   
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -48,7 +50,7 @@
         </div>
     </div>
  
-    <section class="Home" id="home"  style="background-image: url(Assets/img.jpg);">
+    <section class="Home" id="home" >
     
         <h1>Journey to Fullstack Mastery</h1>
         <p>A Study Journal as a REVOU Student. Turning dreams into reality with every line of code. Code Diary</p>
@@ -62,7 +64,11 @@
 
         <section class="card-book-container">
             <div class="card-book">
-                <img class="card-book-img" src="Assets/week0img.jpg" alt="imageslide">
+                <picture>
+                    <source media="(min-width:760px)" srcset="Assets/week0img.jpg">
+                    <img src="Assets/week0img - Crop.jpg" class="card-book-img" alt="imageslide">
+                </picture>
+                <!-- <img class="card-book-img" src="Assets/week0img.jpg" alt="imageslide"> -->
                 <div class="article-container">
                     <h3> Week 0</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui necessitatibus consequatur quisquam laboriosam impedit eos accusamus at sint temporibus? Sequi.</p>
@@ -70,7 +76,11 @@
                 
             </div>
             <div class="card-book">
-                <img class="card-book-img" src="Assets/week1img.jpg" alt="imageslide">
+                <picture>
+                    <source media="(min-width:760px)" srcset="Assets/week1img.jpg">
+                    <img src="Assets/week1img - Copy.jpg" class="card-book-img" alt="imageslide">
+                </picture>
+                <!-- <img class="card-book-img" src="Assets/week1img.jpg" alt="imageslide"> -->
                 <div class="article-container">
                     <h3> Week 1</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui necessitatibus consequatur quisquam laboriosam impedit eos accusamus at sint temporibus? Sequi.</p>
@@ -78,7 +88,11 @@
                 
             </div>
             <div class="card-book">
-                <img class="card-book-img" src="Assets/week2img.jpg" alt="imageslide">
+                <picture>
+                    <source media="(min-width:760px)" srcset="Assets/week2img.jpg">
+                    <img src="Assets/week2img - Copy.jpg" class="card-book-img" alt="imageslide">
+                </picture>
+                <!-- <img class="card-book-img" src="Assets/week2img.jpg" alt="imageslide"> -->
                 <div class="article-container">
                     <h3> Week 2</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui necessitatibus consequatur quisquam laboriosam impedit eos accusamus at sint temporibus? Sequi.</p>
@@ -115,6 +129,15 @@
                     <img src="Assets/userimage.png" alt="image-profile" class="img-static">
                     <div>
                         <h3 class="margin-4px title">
+                            Instructor   
+                        </h3>
+                        <span class="title">Aditya Pradita</span>
+                    </div>
+                </div>
+                <div class="card-profile">
+                    <img src="Assets/userimage.png" alt="image-profile" class="img-static">
+                    <div>
+                        <h3 class="margin-4px title">
                             Team Lead
                         </h3>
                         <span class="title">Kukuh Syaifudin</span>
@@ -145,7 +168,7 @@
                     <input type="text" id="name" name="fName" class="input-width"  required><br><br>
                     <label for="email">Email</label>
                     <input type="email" id="email" name="urEmail" class="input-width" required><br><br>
-                    <label for="laki">Laki-laki</label>
+                    <label for="Laki">Laki-laki</label>
                     <input type="radio" id="Laki" name="Gender" ><br>
                     <label for="perempuan">Perempuan</label>
                     <input type="radio" id="perempuan" name="Gender" ><br><br>
