@@ -166,11 +166,11 @@ main{
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
 .card-profile:hover {
     transform: scale(1.1);
-    background-color: #9fdff4;
+    background-color: #c1e5f1;
 } 
 
 .card-profile h3{
@@ -184,7 +184,8 @@ main{
 }
 
 .img-static {
-    border: 2px solid var(--white);
+    border: 2px solid white;
+    background-color: white;
     object-fit: cover;
     border-radius: 100000px;
     width: 54px;
