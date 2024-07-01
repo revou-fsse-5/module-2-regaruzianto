@@ -111,18 +111,19 @@ main{
 }
 .card-book {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    transition: box-shadow 0.3s;
     width: 30%;
     border-radius: 5px;
     padding: 8px;
+}
+.card-book:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .article-container >h3 {
     font-weight: 400;
 }
-.card-book:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+
 .card-book-img{
     border-radius: 5px 5px 0 0;
     width: 100%;
@@ -132,7 +133,6 @@ main{
 }
 .board{
     display: flex; 
-    flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 18px;
 }
@@ -178,6 +178,7 @@ main{
     font-weight: 500;
 }
 .media {
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,44 +260,115 @@ form>button:hover{
     align-items: center;
 }
 
-
+footer {
+    margin-top: 48px;
+}
+.footer-content {
+    padding: 24px;
+    background-color: #000000;
+}
 #cssportal-grid {
 	display: grid;
-	grid-template-rows: repeat(3, 1fr);
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 16px;
-	height: 200px;
-    margin-top: 24px;
+	margin-top: 24px;
     padding-inline: 12px;
     box-shadow: 1px -4px 6px rgba(0, 0, 0, .16), 0px 1px 2px rgba(0, 0, 0, .23);
 }
 #div1 {
-	grid-area: 2/1/3/2;
+	grid-area: 1/1/2/2;
+    margin: 4px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    color: #3cb0d7;
     font-size: 24px;
-    font-weight: 700;
-    color: #3cb0d7;
-}
-#div2 {
-	grid-area: 1/2/4/3;
-    color: #3cb0d7;
-    font-size: 16px;
+    font-weight: bolder;
     align-content: center;
-   
-    text-shadow: 2px 2px 4px rgba(52, 199, 204, 0.497);
+    background-color:#151414;
+    border-radius: 8px;
 }
-#div3 {
-	grid-area: 2/3/3/4;
+#div1 svg {
+    margin: 4px;  
+}
+
+#div2 {
+	grid-area: 2/1/3/2;
+    margin: 4px;
+    background-color:#151414 ;
+    border-radius: 8px;
     display: flex;
-    column-gap: 52px;
+    gap: 10%;
+    justify-content: center;
     align-items: center;
 }
-#div4 {
-	grid-area: 1/3/2/4;
-    align-content: end;
-	color: #707070;
+
+#div3 {
+	grid-area: 1/2/3/3;
+    margin: 4px; 
+    padding: 8px;
+    /* align-content: center; */
+    border-radius: 8px;
+    background-color: #151414;
+    color: #ededed;
+    text-align: justify;
 }
+#div3 span{
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    color: #ededed;
+}
+
+
+#div4 {
+	grid-area: 1/3/3/3;
+    margin: 4px; 
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    background-color:#151414 ;
+    border-radius: 8px;
+    color: #707070;
+    row-gap: 8px;
+}
+#div4 span{
+    
+    font-size: 1.2rem;
+    color: #ededed;
+}
+#div4 a{
+    text-decoration: none;
+    
+    color: #707070;
+}
+#div5 {
+	grid-area: 1/4/3/5;
+    margin: 4px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    background-color:#151414 ;
+    border-radius: 8px;
+    color: #707070;
+    row-gap: 8px;
+}
+#div5 span{
+    
+    font-size: 1.2rem;  
+    color: #ededed;
+}
+#div5 a{
+    text-decoration: none;
+    /* font-size: 0.75rem; */
+    color: #707070;
+
+}
+
+
+
+
 
 .overlay {
     height: 100%;
@@ -384,7 +456,12 @@ form>button:hover{
     .card-board{
         width: 100%;
     }
-    .card-profile{width: 80%;}
+    .card-profile{
+        width: 80%;
+    }
+    .media{
+        width: 100%;
+    }
     .container{
         display: flex;
         flex-direction: column;
@@ -405,6 +482,37 @@ form>button:hover{
         text-align: center;
         
     }
+    #cssportal-grid {
+        display: grid;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        box-shadow: 1px -4px 6px rgba(0, 0, 0, .16), 0px 1px 2px rgba(0, 0, 0, .23);
+    }
+    #div1 { 
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    #div2 { 
+        grid-area: 2 / 1 / 3 / 3; 
+    }
+    #div3 { 
+        grid-area: 3 / 1 / 5 / 3; 
+    }
+    #div4 { 
+        grid-area: 5 / 1 / 7 / 2; 
+    }
+    #div5 { 
+        grid-area: 5 / 2 / 7 / 3; 
+    }
+
+
+
+
+
+
 }
 
 /* Tablet */
@@ -421,7 +529,7 @@ form>button:hover{
         width: 40%;
     }
     .board{
-        width: 90%;
+        width: inherit;
     }
     .card-board{
         width: 100%;
@@ -434,6 +542,32 @@ form>button:hover{
     }
     .Author-info{
         width: 100%;
+    }
+
+    #cssportal-grid {
+        display: grid;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        box-shadow: 1px -4px 6px rgba(0, 0, 0, .16), 0px 1px 2px rgba(0, 0, 0, .23);
+    }
+    #div1 { 
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    #div2 { 
+        grid-area: 2 / 1 / 3 / 3; 
+    }
+    #div3 { 
+        grid-area: 3 / 1 / 5 / 3; 
+    }
+    #div4 { 
+        grid-area: 5 / 1 / 7 / 2; 
+    }
+    #div5 { 
+        grid-area: 5 / 2 / 7 / 3; 
     }
     
 }
