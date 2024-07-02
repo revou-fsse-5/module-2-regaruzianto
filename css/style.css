@@ -365,8 +365,13 @@ footer {
     color: #707070;
 
 }
-
-
+#div5 ul {
+    list-style-type: none;
+    color: white;
+}
+#div5 li {
+    margin-block: 12px;
+}
 
 
 
