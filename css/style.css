@@ -2,21 +2,40 @@
     margin: 0px;
     padding: 0px;
 }
+html {
+    scroll-behavior: smooth;
+}
+.tema-light {
+    --color-primary: #ffffff;
+    --color-secondary: #fbfbfe;
+    --color-accent: #3cb0d7;
+    --font-color: #707070;
+    --font-color-title: #000000;
+}
+.tema-dark {
+    --color-primary: #333C4D;
+    --color-secondary: #1F467E;
+    --color-accent: #3cb0d7;
+    --font-color: #EDF3FF;
+    --font-color-title: #AAC7FF;
+}
 
 body{
    width: fit-content;
    font-family: "Kanit", sans-serif;
-   
+   background-color: var(--color-primary);
 }
+
 
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     width: 100%;
-    height: 48px;
+    height: 56px;
     top: 0;
-    background-color: white;
+    background-color: var(--color-primary);
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 0 1px 2px rgba(0, 0, 0, .23);
     animation-name: animasi;
     animation-duration: 4s;
@@ -43,14 +62,33 @@ p {
 }
 nav{
     margin-right: 48px;
-    align-content: center;
+    display: flex;
+    column-gap: 42px;
+    justify-content: center;
+    align-items: center;
+    
 }
 nav a{
-    color: #707070;
+    color: var(--font-color);
     text-decoration-line: none;
-    margin-inline: 8px;
     font-weight: 600;
+} 
+.button-tema {
+    border-radius: 100%;
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-color: unset;
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.2);
 }
+.button-tema img {
+    width: 30px;
+}
+
+.button-tema:hover {
+    background-color: #1F467E;
+}
+
 .Home{
     /* background-image: url('/Assets/img1.jpg'); */
     width: 100%;
@@ -82,6 +120,7 @@ nav a{
 main{
     margin-left: 48px;
     margin-right: 48px;
+    
 }
 
 .category-title {
@@ -94,27 +133,38 @@ main{
     text-align: center;
     font-weight: 400;
     font-size: xx-large;
-    color: #212527;
+    color: var(--font-color-title);
     margin-bottom: 0px;
 }
 
 .category-title p{
     text-align: center;
     margin-top: 8px;
+    color: var(--font-color);
 }
 
 .card-book-container {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    background-color: var(--color-primary);
+    color: var(--font-color);
     justify-content: center;
 }
 .card-book {
+    background-color: var(--color-secondary);
+    color: var(--font-color);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: box-shadow 0.3s;
     width: 30%;
     border-radius: 5px;
     padding: 8px;
+}
+.card-book h3{
+    color: var(--font-color-title);
+}
+.card-book p{
+    color: var(--font-color);
 }
 .card-book:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -152,6 +202,7 @@ main{
     
 }
 .card-board >h1,h2 {
+    color: var(--font-color-title);
     font-weight: 400;
 }
 .card-profile {
@@ -166,6 +217,7 @@ main{
     justify-content: center;
     gap: 24px;
     flex-wrap: wrap;
+    background-color: var(--color-secondary);
     transition: transform 0.5s;
 }
 .card-profile:hover {
@@ -176,6 +228,10 @@ main{
 .card-profile h3{
     width: 150px;
     font-weight: 500;
+    color: var(--font-color-title);
+}
+.card-profile span{
+    color: var(--font-color);
 }
 .media {
     width: 50%;
@@ -215,6 +271,12 @@ main{
     gap: 12px;
     width: 60%;
 }
+.info h3{
+    color: var(--font-color-title);
+}
+.info p{
+    color: var(--font-color);
+}
 .avatar{
     justify-content: flex-end;
 }
@@ -235,6 +297,13 @@ main{
 }
 form {
     font-family: Kanit,sans-serif;
+}
+form h3{
+    color: var(--font-color-title);
+
+}
+form label{
+    color: var(--font-color);
 }
 
 
@@ -361,9 +430,7 @@ footer {
 }
 #div5 a{
     text-decoration: none;
-    /* font-size: 0.75rem; */
     color: #707070;
-
 }
 #div5 ul {
     list-style-type: none;
@@ -372,8 +439,6 @@ footer {
 #div5 li {
     margin-block: 12px;
 }
-
-
 
 .overlay {
     height: 100%;
@@ -479,10 +544,10 @@ footer {
         display: none;
     }
     .hamburger-button{
-        display: block;
-        align-content: center;
-        margin-right:8px ;
-        width: 40px;
+        display: flex;
+        column-gap: 28px;
+        align-items: center;
+        margin-right:42px ;
         height: 100%;
         text-align: center;
         
