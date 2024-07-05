@@ -45,6 +45,7 @@ https://sinaufullstack.site/
 - If you have a custom domain:
   - Go to **'Site settings > Domain management'**.
   - Add your custom domain and configure DNS settings.
+  - In domain hosting set up Name server from netlify
 
 ## Additional Notes
 - **Build Hooks**: Use build hooks to trigger builds manually or integrate with other services.
